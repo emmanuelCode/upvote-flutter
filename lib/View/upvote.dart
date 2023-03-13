@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:simplemviprovider/Intent/upvote_intent.dart';
+import 'package:simplemviprovider/View/upvote_provider.dart';
 
 class UpVote extends StatelessWidget {
   const UpVote({super.key});
@@ -29,22 +28,19 @@ class _MyHomePageState extends StatelessWidget {
         ),
         body: Consumer(
           // share the provider variable to it children widget
-          builder: (_,WidgetRef ref, __) => Column(
+          builder: (_, WidgetRef ref, __) => Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    'todo',
-                    //ref.watch(),
-                    //'${intentFactory.upvoteModel.hearts} ❤',
+                  Text(  
+                  '${ref.watch(intentFactoryProvider).upvoteModel.hearts} ❤',
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'todo',
-                    //'${intentFactory.upvoteModel.thumbsUp} 👍',
+                    '${ref.watch(intentFactoryProvider).upvoteModel.hearts} 👍',
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                 ],
@@ -60,6 +56,7 @@ class _MyHomePageState extends StatelessWidget {
                         debugPrint('heart');
                         //todo
                         //intentFactory.addHeart();
+                        //ref.read()
                       },
                     ),
                   ),
@@ -71,6 +68,7 @@ class _MyHomePageState extends StatelessWidget {
                         debugPrint('thumb');
                         //todo
                         //intentFactory.addThumbsUp();
+                      
                       },
                     ),
                   ),
@@ -82,15 +80,5 @@ class _MyHomePageState extends StatelessWidget {
   }
 }
 
-//Consumer<ChangeNumber>(
-/////wrap our text widgets with a consumer of type changeNumber
-//builder: (_, changeVariable, __) => Text(
-////'$_counter',
-//'${changeVariable.a}',
-//
-///// get our value from ChangeValue variable
-//style: Theme.of(context).textTheme.display1,
-//),
-//),
 
 //%d ❤️️ %d 👍
