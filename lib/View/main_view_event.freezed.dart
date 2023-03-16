@@ -37,20 +37,20 @@ mixin _$MainViewEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ThumbsUpClick value) thumbsUpClick,
-    required TResult Function(_LoveItClick value) loveItClick,
+    required TResult Function(ThumbsUpClick value) thumbsUpClick,
+    required TResult Function(LoveItClick value) loveItClick,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ThumbsUpClick value)? thumbsUpClick,
-    TResult? Function(_LoveItClick value)? loveItClick,
+    TResult? Function(ThumbsUpClick value)? thumbsUpClick,
+    TResult? Function(LoveItClick value)? loveItClick,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ThumbsUpClick value)? thumbsUpClick,
-    TResult Function(_LoveItClick value)? loveItClick,
+    TResult Function(ThumbsUpClick value)? thumbsUpClick,
+    TResult Function(LoveItClick value)? loveItClick,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -75,25 +75,25 @@ class _$MainViewEventCopyWithImpl<$Res, $Val extends MainViewEvent>
 }
 
 /// @nodoc
-abstract class _$$_ThumbsUpClickCopyWith<$Res> {
-  factory _$$_ThumbsUpClickCopyWith(
-          _$_ThumbsUpClick value, $Res Function(_$_ThumbsUpClick) then) =
-      __$$_ThumbsUpClickCopyWithImpl<$Res>;
+abstract class _$$ThumbsUpClickCopyWith<$Res> {
+  factory _$$ThumbsUpClickCopyWith(
+          _$ThumbsUpClick value, $Res Function(_$ThumbsUpClick) then) =
+      __$$ThumbsUpClickCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ThumbsUpClickCopyWithImpl<$Res>
-    extends _$MainViewEventCopyWithImpl<$Res, _$_ThumbsUpClick>
-    implements _$$_ThumbsUpClickCopyWith<$Res> {
-  __$$_ThumbsUpClickCopyWithImpl(
-      _$_ThumbsUpClick _value, $Res Function(_$_ThumbsUpClick) _then)
+class __$$ThumbsUpClickCopyWithImpl<$Res>
+    extends _$MainViewEventCopyWithImpl<$Res, _$ThumbsUpClick>
+    implements _$$ThumbsUpClickCopyWith<$Res> {
+  __$$ThumbsUpClickCopyWithImpl(
+      _$ThumbsUpClick _value, $Res Function(_$ThumbsUpClick) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ThumbsUpClick implements _ThumbsUpClick {
-  const _$_ThumbsUpClick();
+class _$ThumbsUpClick implements ThumbsUpClick {
+  const _$ThumbsUpClick();
 
   @override
   String toString() {
@@ -103,7 +103,7 @@ class _$_ThumbsUpClick implements _ThumbsUpClick {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ThumbsUpClick);
+        (other.runtimeType == runtimeType && other is _$ThumbsUpClick);
   }
 
   @override
@@ -143,8 +143,8 @@ class _$_ThumbsUpClick implements _ThumbsUpClick {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ThumbsUpClick value) thumbsUpClick,
-    required TResult Function(_LoveItClick value) loveItClick,
+    required TResult Function(ThumbsUpClick value) thumbsUpClick,
+    required TResult Function(LoveItClick value) loveItClick,
   }) {
     return thumbsUpClick(this);
   }
@@ -152,8 +152,8 @@ class _$_ThumbsUpClick implements _ThumbsUpClick {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ThumbsUpClick value)? thumbsUpClick,
-    TResult? Function(_LoveItClick value)? loveItClick,
+    TResult? Function(ThumbsUpClick value)? thumbsUpClick,
+    TResult? Function(LoveItClick value)? loveItClick,
   }) {
     return thumbsUpClick?.call(this);
   }
@@ -161,8 +161,8 @@ class _$_ThumbsUpClick implements _ThumbsUpClick {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ThumbsUpClick value)? thumbsUpClick,
-    TResult Function(_LoveItClick value)? loveItClick,
+    TResult Function(ThumbsUpClick value)? thumbsUpClick,
+    TResult Function(LoveItClick value)? loveItClick,
     required TResult orElse(),
   }) {
     if (thumbsUpClick != null) {
@@ -172,30 +172,30 @@ class _$_ThumbsUpClick implements _ThumbsUpClick {
   }
 }
 
-abstract class _ThumbsUpClick implements MainViewEvent {
-  const factory _ThumbsUpClick() = _$_ThumbsUpClick;
+abstract class ThumbsUpClick implements MainViewEvent {
+  const factory ThumbsUpClick() = _$ThumbsUpClick;
 }
 
 /// @nodoc
-abstract class _$$_LoveItClickCopyWith<$Res> {
-  factory _$$_LoveItClickCopyWith(
-          _$_LoveItClick value, $Res Function(_$_LoveItClick) then) =
-      __$$_LoveItClickCopyWithImpl<$Res>;
+abstract class _$$LoveItClickCopyWith<$Res> {
+  factory _$$LoveItClickCopyWith(
+          _$LoveItClick value, $Res Function(_$LoveItClick) then) =
+      __$$LoveItClickCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoveItClickCopyWithImpl<$Res>
-    extends _$MainViewEventCopyWithImpl<$Res, _$_LoveItClick>
-    implements _$$_LoveItClickCopyWith<$Res> {
-  __$$_LoveItClickCopyWithImpl(
-      _$_LoveItClick _value, $Res Function(_$_LoveItClick) _then)
+class __$$LoveItClickCopyWithImpl<$Res>
+    extends _$MainViewEventCopyWithImpl<$Res, _$LoveItClick>
+    implements _$$LoveItClickCopyWith<$Res> {
+  __$$LoveItClickCopyWithImpl(
+      _$LoveItClick _value, $Res Function(_$LoveItClick) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoveItClick implements _LoveItClick {
-  const _$_LoveItClick();
+class _$LoveItClick implements LoveItClick {
+  const _$LoveItClick();
 
   @override
   String toString() {
@@ -205,7 +205,7 @@ class _$_LoveItClick implements _LoveItClick {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoveItClick);
+        (other.runtimeType == runtimeType && other is _$LoveItClick);
   }
 
   @override
@@ -245,8 +245,8 @@ class _$_LoveItClick implements _LoveItClick {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ThumbsUpClick value) thumbsUpClick,
-    required TResult Function(_LoveItClick value) loveItClick,
+    required TResult Function(ThumbsUpClick value) thumbsUpClick,
+    required TResult Function(LoveItClick value) loveItClick,
   }) {
     return loveItClick(this);
   }
@@ -254,8 +254,8 @@ class _$_LoveItClick implements _LoveItClick {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ThumbsUpClick value)? thumbsUpClick,
-    TResult? Function(_LoveItClick value)? loveItClick,
+    TResult? Function(ThumbsUpClick value)? thumbsUpClick,
+    TResult? Function(LoveItClick value)? loveItClick,
   }) {
     return loveItClick?.call(this);
   }
@@ -263,8 +263,8 @@ class _$_LoveItClick implements _LoveItClick {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ThumbsUpClick value)? thumbsUpClick,
-    TResult Function(_LoveItClick value)? loveItClick,
+    TResult Function(ThumbsUpClick value)? thumbsUpClick,
+    TResult Function(LoveItClick value)? loveItClick,
     required TResult orElse(),
   }) {
     if (loveItClick != null) {
@@ -274,6 +274,6 @@ class _$_LoveItClick implements _LoveItClick {
   }
 }
 
-abstract class _LoveItClick implements MainViewEvent {
-  const factory _LoveItClick() = _$_LoveItClick;
+abstract class LoveItClick implements MainViewEvent {
+  const factory LoveItClick() = _$LoveItClick;
 }

@@ -5,7 +5,7 @@ import 'View/upvote.dart';
 ///provider need a create
 void main() => runApp(
       //add the provider type
-      ProviderScope(
+      const ProviderScope(
         //create: (_) => IntentFactory(), // define the class
         child: UpVote(), //the child as the app
       ),

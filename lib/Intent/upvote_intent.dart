@@ -1,44 +1,27 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:simplemviprovider/Model/upvote_model.dart';
 import 'package:simplemviprovider/View/main_view_event.dart';
 
-//in order to use the Provider
-// I need a class with methods that I would want to invoke
-// when calling
-class IntentFactory extends StateNotifier<MainViewEvent>{
-  UpvoteModel upvoteModel = UpvoteModel(hearts: 0, thumbsUp: 0);
+part 'upvote_intent.g.dart';
 
-  IntentFactory()
+// the annotation here create a provider for me and declare it
+// all I need is to add the method I need for when the state change
+// and get the "ref" in our flutter widget with "mainViewIntentFactoryProvider"
+// variable 
+@riverpod
+class MainViewIntentFactory extends _$MainViewIntentFactory {
+  // add my model here to begin with initial values
+  // I need to override the build method here
+  // the "state" variable here is the model itself 
+  // https://docs-v2.riverpod.dev/docs/providers/notifier_provider
+  @override
+  UpvoteModel build() => const UpvoteModel(hearts: 0, thumbsUp: 0);
 
-
-
-  addHeart() {
-
-    upvoteModel.hearts++;
+  void toIntent(MainViewEvent mainViewEvent) {
+    mainViewEvent.when(
+      thumbsUpClick: () => state = state.copyWith(thumbsUp: state.thumbsUp + 1),
+      loveItClick: () => state = state.copyWith(hearts: state.hearts + 1),
+    );
   }
-
-  addThumbsUp() {
-    upvoteModel.thumbsUp++;
-  }
-
-  toIntent(){
-    
-  }
-
 }
 
-// void toIntent(MainViewEvent viewEvent) {
-
-
-
-//   switch (viewEvent) {
-//     case LoveItClick:
-//       //copy(hearts = hearts + 1);
-//       break;
-
-//     case ThumbsUpClick:
-//       //copy(thumbs = thumbs + 1);
-//       break;
-//   }
-// }
