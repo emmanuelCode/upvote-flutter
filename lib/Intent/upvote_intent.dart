@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:simplemviprovider/Model/upvote_model.dart';
-import 'package:simplemviprovider/View/main_view_event.dart';
+import 'package:upvote/Model/upvote_model.dart';
+import 'package:upvote/View/main_view_event.dart';
 
 part 'upvote_intent.g.dart';
 

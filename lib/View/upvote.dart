@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:simplemviprovider/Model/upvote_model.dart';
-import 'package:simplemviprovider/View/main_view_event.dart';
+import 'package:upvote/Model/upvote_model.dart';
+import 'package:upvote/View/main_view_event.dart';
 
 import '../Intent/upvote_intent.dart';
 
