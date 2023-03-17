@@ -8,7 +8,6 @@ import '../Intent/upvote_intent.dart';
 class UpVote extends StatelessWidget {
   const UpVote({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +28,7 @@ class _MyHomePageState extends StatelessWidget {
           title: const Text('Upvote Flutter Version'),
         ),
         body: Consumer(
-          // share the provider variable to it children widget
+          // share the provider variable to it children widget using the consumer
           builder: (_, WidgetRef ref, __) {
             //the watch here is to listen for changes for the upvote model
             UpvoteModel upvoteModel = ref.watch(mainViewIntentFactoryProvider);
@@ -40,7 +39,6 @@ class _MyHomePageState extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      //ref.watch(todosProvider)
                       '${upvoteModel.hearts} ❤',
                       style: Theme.of(context).textTheme.displaySmall,
                     ),
@@ -89,6 +87,3 @@ class _MyHomePageState extends StatelessWidget {
         ));
   }
 }
-
-
-//%d ❤️️ %d 👍
