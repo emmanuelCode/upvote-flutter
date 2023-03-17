@@ -1,6 +1,6 @@
-# simplemviprovider
+# upvote
 
-an example using riverpod state management with mvi design pattern
+an example using riverpod state management with mvi design pattern,
 this is a work in progress!!! 
 
 ![](sample_image.png)
