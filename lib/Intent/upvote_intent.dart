@@ -18,10 +18,11 @@ class MainViewIntentFactory extends _$MainViewIntentFactory {
   UpvoteModel build() => const UpvoteModel(hearts: 0, thumbsUp: 0);
 
   void toIntent(MainViewEvent mainViewEvent) {
-    mainViewEvent.when(
-      thumbsUpClick: () => state = state.copyWith(thumbsUp: state.thumbsUp + 1),
-      loveItClick: () => state = state.copyWith(hearts: state.hearts + 1),
-    );
+    switch (mainViewEvent) {
+      case ThumbsUpClick():
+        state = state.copyWith(thumbsUp: state.thumbsUp + 1);
+      case LoveItClick():
+        state = state.copyWith(hearts: state.hearts + 1);
+    }
   }
 }
-

@@ -61,7 +61,7 @@ class _MyHomePageState extends StatelessWidget {
                           // method from upvote_intent.dart
                           ref
                               .read(mainViewIntentFactoryProvider.notifier)
-                              .toIntent(const MainViewEvent.loveItClick());
+                              .toIntent(LoveItClick());
                           debugPrint('heart');
                         },
                       ),
@@ -73,7 +73,7 @@ class _MyHomePageState extends StatelessWidget {
                         onPressed: () {
                           ref
                               .read(mainViewIntentFactoryProvider.notifier)
-                              .toIntent(const MainViewEvent.thumbsUpClick());
+                              .toIntent(ThumbsUpClick());
                           debugPrint('thumb');
                     
                         },
