@@ -11,9 +11,9 @@ class UpVote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter MVI Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       home: _MyHomePageState(),
     );
@@ -26,6 +26,7 @@ class _MyHomePageState extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Upvote Flutter Version'),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
         body: Consumer(
           // share the provider variable to it children widget using the consumer
@@ -57,7 +58,7 @@ class _MyHomePageState extends StatelessWidget {
                       child: ElevatedButton(
                         child: const Text('+❤'),
                         onPressed: () {
-                          // use the notifier inside read to call our intent 
+                          // use the notifier inside read to call our intent
                           // method from upvote_intent.dart
                           ref
                               .read(mainViewIntentFactoryProvider.notifier)
@@ -75,7 +76,6 @@ class _MyHomePageState extends StatelessWidget {
                               .read(mainViewIntentFactoryProvider.notifier)
                               .toIntent(ThumbsUpClick());
                           debugPrint('thumb');
-                    
                         },
                       ),
                     ),
