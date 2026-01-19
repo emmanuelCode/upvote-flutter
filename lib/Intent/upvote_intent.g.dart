@@ -6,21 +6,52 @@ part of 'upvote_intent.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$mainViewIntentFactoryHash() =>
-    r'92ea9da5821cfb9c527733e37293aa46f15b7a1d';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [MainViewIntentFactory].
 @ProviderFor(MainViewIntentFactory)
-final mainViewIntentFactoryProvider =
-    AutoDisposeNotifierProvider<MainViewIntentFactory, UpvoteModel>.internal(
-  MainViewIntentFactory.new,
-  name: r'mainViewIntentFactoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$mainViewIntentFactoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final mainViewIntentFactoryProvider = MainViewIntentFactoryProvider._();
 
-typedef _$MainViewIntentFactory = AutoDisposeNotifier<UpvoteModel>;
-// ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions
+final class MainViewIntentFactoryProvider
+    extends $NotifierProvider<MainViewIntentFactory, UpvoteModel> {
+  MainViewIntentFactoryProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'mainViewIntentFactoryProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$mainViewIntentFactoryHash();
+
+  @$internal
+  @override
+  MainViewIntentFactory create() => MainViewIntentFactory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(UpvoteModel value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<UpvoteModel>(value),
+    );
+  }
+}
+
+String _$mainViewIntentFactoryHash() =>
+    r'447683382e649511674db51bb8d3acd2759eb2b4';
+
+abstract class _$MainViewIntentFactory extends $Notifier<UpvoteModel> {
+  UpvoteModel build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<UpvoteModel, UpvoteModel>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<UpvoteModel, UpvoteModel>, UpvoteModel, Object?, Object?>;
+    element.handleCreate(ref, build);
+  }
+}

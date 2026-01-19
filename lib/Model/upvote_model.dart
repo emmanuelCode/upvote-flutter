@@ -8,7 +8,7 @@ part 'upvote_model.freezed.dart';
 //creating an immutable data class /hashcode/copyWith/toString etc..
 //similiar to kotlin language data class
 @freezed
-class UpvoteModel with _$UpvoteModel{
+abstract class UpvoteModel with _$UpvoteModel{
 
   const factory UpvoteModel({
     required int hearts,
