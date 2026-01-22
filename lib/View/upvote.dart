@@ -20,12 +20,15 @@ class UpVote extends StatelessWidget {
   }
 }
 
+// instead of the StatefulWidget we use ConsumerWidget
+// to get access to the provider variable
 class _MyHomePageState extends ConsumerWidget {
   @override
+  // here we get the WidgetRef ref variable to access our provider
   Widget build(BuildContext context, WidgetRef ref) {
      // share the provider variable to it children 
      // the watch here is to listen for changes for the upvote model
-    final upvoteModel = ref.watch(mainViewIntentFactoryProvider);
+    final UpvoteModel upvoteModel = ref.watch(mainViewIntentFactoryProvider);
     return Scaffold(
         appBar: AppBar(
           title: const Text('Upvote Flutter Version'),
