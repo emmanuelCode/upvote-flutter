@@ -20,20 +20,18 @@ class UpVote extends StatelessWidget {
   }
 }
 
-class _MyHomePageState extends StatelessWidget {
+class _MyHomePageState extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+     // share the provider variable to it children 
+     // the watch here is to listen for changes for the upvote model
+    final upvoteModel = ref.watch(mainViewIntentFactoryProvider);
     return Scaffold(
         appBar: AppBar(
           title: const Text('Upvote Flutter Version'),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
-        body: Consumer(
-          // share the provider variable to it children widget using the consumer
-          builder: (_, WidgetRef ref, __) {
-            //the watch here is to listen for changes for the upvote model
-            UpvoteModel upvoteModel = ref.watch(mainViewIntentFactoryProvider);
-            return Column(
+        body: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Row(
@@ -82,8 +80,6 @@ class _MyHomePageState extends StatelessWidget {
                   ],
                 ),
               ],
-            );
-          },
-        ));
+            ));
   }
 }
