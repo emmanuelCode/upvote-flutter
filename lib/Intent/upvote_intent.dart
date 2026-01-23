@@ -8,12 +8,12 @@ part 'upvote_intent.g.dart';
 // all I need is to add the method I need for when the state change
 // and get the "ref" in our flutter widget with "mainViewIntentFactoryProvider"
 // variable 
+// https://riverpod.dev/docs/concepts2/refs#how-to-obtain-a-ref
 @riverpod
 class MainViewIntentFactory extends _$MainViewIntentFactory {
   // add my model here to begin with initial values
   // I need to override the build method here
   // the "state" variable here is the model itself 
-  // https://docs-v2.riverpod.dev/docs/providers/notifier_provider
   @override
   UpvoteModel build() => const UpvoteModel(hearts: 0, thumbsUp: 0);
 

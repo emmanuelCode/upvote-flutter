@@ -8,10 +8,12 @@
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
-# this to add this for riverpod_lints
+
+# riverpod package lint rules
+plugins: 
+  riverpod_lint: ^3.1.0
+
 analyzer:
-  plugins:
-    - custom_lint
 
 linter:
   # The lint rules applied to this project can be customized in the
