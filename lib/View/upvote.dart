@@ -15,15 +15,15 @@ class UpVote extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: MyHomePageState(),
+      home: MyHomePage(),
     );
   }
 }
 
 // instead of the StatelessWidget we use ConsumerWidget
 // to get access to the provider variable
-class MyHomePageState extends ConsumerWidget {
-  const MyHomePageState({super.key});
+class MyHomePage extends ConsumerWidget {
+  const MyHomePage({super.key});
 
   @override
   // here we get the WidgetRef ref variable to access our provider
